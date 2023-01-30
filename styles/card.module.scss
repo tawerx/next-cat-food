@@ -1,0 +1,176 @@
+.card {
+  width: 320px;
+  height: 509px;
+  position: relative;
+
+  &.selected {
+    .card_container {
+      background-image: url(/images/cardSelected.png);
+
+      &_title {
+        span {
+          &.selected {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+              Arial, sans-serif;
+            font-size: 16px;
+            color: #e52e7a;
+          }
+        }
+      }
+
+      &_weigth {
+        background-color: #d91667;
+      }
+    }
+  }
+
+  &.unavailable {
+    .card_container {
+      cursor: initial;
+      background-image: url(/images/cardDisable.png);
+      background-repeat: no-repeat;
+      border: 0px;
+      background-color: initial;
+
+      &_title {
+        span {
+          color: #b3b3b3;
+        }
+      }
+
+      &_taste {
+        color: #b3b3b3;
+      }
+
+      &_portion,
+      &_gift,
+      &_customer {
+        color: #b3b3b3;
+      }
+
+      &_weigth {
+        background-color: #b3b3b3;
+      }
+    }
+
+    .card_description {
+      p {
+        color: #ffff66;
+      }
+    }
+  }
+}
+
+.card_container {
+  cursor: pointer;
+  background-image: url(/images/cardDefault.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 480px;
+
+  &_title {
+    position: absolute;
+    top: 21px;
+    left: 51px;
+    span {
+      color: #666666;
+    }
+  }
+
+  &_taste {
+    position: absolute;
+    top: 45px;
+    left: 51px;
+    h1 {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+        sans-serif;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    h2 {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+        sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  &_sub_title {
+    position: absolute;
+    top: 143px;
+    left: 51px;
+  }
+
+  &_portion,
+  &_gift,
+  &_customer {
+    color: #666666;
+  }
+
+  &_weigth {
+    width: 80px;
+    height: 80px;
+    background-color: #1698d9;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+      sans-serif;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    top: 384px;
+    left: 224px;
+
+    span {
+      font-size: 42px;
+      font-weight: bold;
+      position: relative;
+      top: 3px;
+    }
+    p {
+      font-size: 25px;
+      position: relative;
+      top: -7px;
+    }
+  }
+
+  &_portion,
+  &_gift {
+    span {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+        sans-serif;
+    }
+  }
+}
+
+.card_description {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+      sans-serif;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+
+    .buy {
+      font-family: inherit;
+      cursor: pointer;
+      color: #1698d9;
+      border-bottom: 2px dashed #1698d9;
+    }
+    .dot {
+      font-family: inherit;
+      color: #1698d9;
+    }
+  }
+}
